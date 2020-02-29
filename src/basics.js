@@ -1,12 +1,44 @@
-```javascript
+//javascript
 /* 1.   write a loop that counts from 0 to 100 and logs the current number to the console */
 // code here
 /* 2.   define a function that counts from 0 to 100 if called */
+// function counter() {}
+
+function counter() {
+  let counter = 0;
+  for (let i = 0; i < 100; i++) {
+    counter++;
+  }
+  return counter;
+}
 // code here
 /* 3.   define a function that counts from 0 to whatever value you passed to it, call this function with 3 different arguments */
 // code here
+
+function countFunction(num) {
+  let currNumber = 0;
+  for (let i = 0; i < num.length; i++) {
+    currNumber++;
+  }
+  return currNumber;
+}
+
+countFunction(55);
 /* 4.   given this array: var arrayWords = ["cow", "chicken", "dog", "cat"] console log every element using a loop */
 // code here
+var arrayWords = ['cow', 'chicken', 'dog', 'cat'];
+function animals(arr) {
+  let words = [];
+  for (let i = 0; i < arr.length; i++) {
+    // words += arr[i];
+    console.log(arr[i]);
+    words.push(arr[i]);
+  }
+  console.log(words);
+}
+
+animals(arrayWords);
+
 /* 5.   define a function that logs every elements of the arrayWords variable. Call this function. */
 // code here
 /* 6.   define a function that logs all words of any array with words you pass to it. Declare two of those arrays. */
@@ -20,6 +52,7 @@ Mickey
 Chip
 Dale
 */
+
 var myPets = ['Mittens', 'Doge', 'Mickey', 'Chip', 'Dale'];
 //write code here
 /* 9. print out only the even names. The output should be: 
@@ -53,4 +86,3 @@ guitar
 mandolin
 */
 //write code here
-```
