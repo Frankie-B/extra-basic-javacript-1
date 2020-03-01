@@ -27,6 +27,9 @@ countFunction(55);
 /* 4.   given this array: var arrayWords = ["cow", "chicken", "dog", "cat"] console log every element using a loop */
 // code here
 var arrayWords = ['cow', 'chicken', 'dog', 'cat'];
+
+/* 5.   define a function that logs every elements of the arrayWords variable. Call this function. */
+// code here
 function animals(arr) {
   let words = [];
   for (let i = 0; i < arr.length; i++) {
@@ -39,12 +42,68 @@ function animals(arr) {
 
 animals(arrayWords);
 
-/* 5.   define a function that logs every elements of the arrayWords variable. Call this function. */
-// code here
 /* 6.   define a function that logs all words of any array with words you pass to it. Declare two of those arrays. */
 // code here
+let mixedArr = [
+  'The',
+  2,
+  'Quick',
+  4,
+  'Brown',
+  6,
+  'Fox',
+  8,
+  'Jumps',
+  10,
+  'Over',
+  'The',
+  'Lazy',
+  'Log',
+];
+let mixedArrTwo = [
+  'The',
+  1,
+  'Rain',
+  3,
+  'In',
+  5,
+  'Spain',
+  7,
+  'Cow',
+  'Falls',
+  9,
+  'Mainly',
+  'On',
+  'The',
+  'Plain',
+];
+
+function arrayLog(arr) {
+  let words = [];
+  arr.forEach(item => {
+    if (typeof item === 'string') {
+      words.push(item);
+      console.log(words);
+    }
+  });
+  return words;
+}
+arrayLog(mixedArr);
+
 /* 7.   define a function that logs all words of any array with words you pass to it, except when the word is "cow" (use a conditional). Declare two of those arrays and call the function on them */
 // code here
+function stringFilter(arr) {
+  let nonBovine = [];
+  arr.forEach(item => {
+    if (typeof item === 'string' && item !== 'Cow') {
+      nonBovine.push(item);
+    }
+  });
+  return nonBovine;
+}
+
+stringFilter(mixedArrTwo);
+
 /* 8. given this array print out all names. The output should be: */
 /*Mittens
 Doge
@@ -52,8 +111,17 @@ Mickey
 Chip
 Dale
 */
-
 var myPets = ['Mittens', 'Doge', 'Mickey', 'Chip', 'Dale'];
+let petName = '';
+function pets(arr) {
+  arr.forEach(pet => {
+    petName += pet + ' ';
+  });
+  return petName;
+}
+
+console.log(pets);
+
 //write code here
 /* 9. print out only the even names. The output should be: 
 Mittens

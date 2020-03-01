@@ -1,5 +1,5 @@
-describe('function counter()', function() {
-  it('should count from 1-100', function() {
+describe('count to 100', function() {
+  it('should create a function called counter', function() {
     expect(typeof counter).toEqual('function');
     //demonstrates use of custom matcher
   });
@@ -9,8 +9,8 @@ describe('function counter()', function() {
   });
 });
 
-describe('function countFunction()', function() {
-  it('should be a function', function() {
+describe('count to parameter', function() {
+  it('should be a function name countFunction', function() {
     expect(typeof countFunction).toEqual('function');
   });
 
@@ -23,12 +23,62 @@ describe('function countFunction()', function() {
   });
 });
 
-describe('declare function animals()', function() {
+describe('display animals', function() {
   it('should log each element from arrayWords', function() {
     expect(typeof animals).toEqual('function');
   });
 
   it('should take in one parameter', function() {
-    expect(animals(0)).toEqual(animals(1));
+    expect(animals(1)).toEqual(animals(1));
+  });
+});
+
+describe('log words in any array', function() {
+  it('should be a function named arrayLog', function() {
+    expect(typeof arrayLog).toEqual('function');
+  });
+
+  it('should return an array of only strings inside any array', function() {
+    expect(arrayLog(mixedArr)).toEqual([
+      'The',
+      'Quick',
+      'Brown',
+      'Fox',
+      'Jumps',
+      'Over',
+      'The',
+      'Lazy',
+      'Log',
+    ]);
+  });
+});
+
+describe('return an array', function() {
+  it('should declare a function named stringFilter', function() {
+    expect(typeof stringFilter).toEqual('function');
+  });
+
+  it('should return an array', function() {
+    expect(stringFilter(mixedArrTwo)).toEqual([
+      'The',
+      'Rain',
+      'In',
+      'Spain',
+      'Falls',
+      'Mainly',
+      'On',
+      'The',
+      'Plain',
+    ]);
+  });
+});
+
+describe('declare pets', () => {
+  it('should be a function', () => {
+    expect(typeof pets).toEqual('function');
+  });
+
+  it('should return names', () => {
+    expect(pets(myPets)).toEqual('Mittens Doge Mickey Chip Dale');
   });
 });
